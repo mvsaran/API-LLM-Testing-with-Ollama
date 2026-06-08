@@ -47,6 +47,62 @@ This framework layers specialized AI validation techniques **on top of** a stand
 
 ---
 
+## 🧑‍💻 Why This Matters for QA Engineers
+
+Most QA teams are now being asked to test AI features with no training, no tooling, and no playbook. This framework directly addresses that gap across every layer of a QA engineer's work.
+
+---
+
+### 🔵 Traditional API Testing — Enhanced
+
+Everything you already do as an SDET, but better:
+
+- All API and AI tests live in **one codebase** — no context-switching between Postman, RestAssured, and a separate AI tool
+- Playwright's built-in **retry, parallelism, and HTML reporting** replaces a lot of manual glue code
+- Zod schemas act as **living contracts** — if the API response shape changes, tests break immediately and loudly
+
+---
+
+### 🟣 LLM Feature Testing — Finally Solved
+
+This is where most QA teams have **no strategy yet**. You can't write `assert response == "Hello"` because the LLM says something slightly different every single run. This framework gives you a concrete answer for every common AI testing question:
+
+| ❓ QA Question | ✅ How the Framework Answers It |
+|---|---|
+| "Did the AI return valid data?" | Zod schema validation — checks **structure**, not wording |
+| "Did the AI hallucinate?" | `ResponseEvaluator` automatically flags fabricated content |
+| "Is the AI consistent?" | Runs the same prompt N times and compares outputs statistically |
+| "Did the AI call the right function?" | Tool call validator checks exact name + argument structure |
+| "Is this response actually relevant?" | LLM-as-a-judge scores semantic relevance automatically |
+
+---
+
+### 🔴 Edge Case & Security Testing — Out of the Box
+
+QAs often skip AI security testing because they don't know where to start. This framework removes that barrier:
+
+- **Prompt injection tests** are pre-written — just run them
+- Catches scenarios where malicious user input hijacks the AI's behaviour
+- Hallucination edge cases are pre-catalogued in `testPrompts.ts`, ready to extend
+
+---
+
+### 📊 Reporting That Actually Speaks to Stakeholders
+
+Traditional test reports show pass/fail. For AI features, stakeholders need **quantified confidence**, not just green ticks.
+
+- `ai-summary.json` gives you **measurable AI quality** across every run
+- Metrics like **Hallucination Rate** and **AI Quality Score** can become part of your **Definition of Done**
+- Gives QA a clear, data-backed voice when the team debates whether an AI feature is ready to ship
+
+---
+
+### 🎓 Career Growth for QAs
+
+Practically speaking, this framework gives you a **concrete, runnable project** to learn and demonstrate AI testing skills — without needing to abandon your existing Playwright/TypeScript knowledge or learn an entirely new stack from scratch.
+
+---
+
 ## 📂 Project Structure
 
 ```text
