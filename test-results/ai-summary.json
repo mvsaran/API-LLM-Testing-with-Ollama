@@ -1,0 +1,13 @@
+{
+  "apiTests": {
+    "passed": 0,
+    "total": 0
+  },
+  "llmTests": {
+    "passed": 3,
+    "total": 3
+  },
+  "toolAccuracy": "100.00",
+  "hallucinationRate": "N/A",
+  "aiQualityScore": "100.00"
+}
